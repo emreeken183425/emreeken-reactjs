@@ -5,12 +5,15 @@ import ProductDetail from './ProductDetail'
 
 
 const Home = () => {
+  
+  
   return (
-    <div className='flex flex-row space-x-4' >
+    <div className='flex flex-col ' >
+     
          <div>
            <Category />
           </div>
-          <div>
+          <div  >
             <ProductDetail />
           </div>
     </div>

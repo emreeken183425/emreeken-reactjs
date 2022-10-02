@@ -35,13 +35,13 @@ const Category = () => {
   <div>
     {
      
-      <table>
+      <div className='flex m-5 justify-between border-2 border-blue-600 p-1 '>
         {
           category.map((category:categoryType)=>(
-            <tr>{category.name} </tr>
+            <div className='' >{category.name} </div>
           ) )
         }
-      </table>
+      </div>
     
       
     }
