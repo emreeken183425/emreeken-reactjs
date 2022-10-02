@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+       {/* <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/ProductDetail/:id" element={<ProductDetail />} />          
+          <Route path="/createproduct" element={<CreateProduct />} />          
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register/>} />
+        </Routes>
+      </BrowserRouter>  */}

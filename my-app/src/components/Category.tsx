@@ -3,7 +3,7 @@ import  { useState,useEffect } from 'react';
 import axios from 'axios'
 
 type categoryType={
-  _id: string;
+  _id: string
   name: string;
   createdAt: Date;
   updatedAt: Date;

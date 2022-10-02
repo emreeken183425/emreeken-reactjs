@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -15,7 +15,7 @@ type productType = {
   __v: number;
 };
 
-const ProductDetail = () => {
+const Products = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -36,12 +36,12 @@ const ProductDetail = () => {
     get_product();
   }, []);
   return (
-    <div  className='grid sm:grid-cols-2 lg:grid-cols-4 gap-3 ' >
+    <div  className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3 ' >
        {product.map((product: productType) => (
          
         <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img className="w-30 h-30 " src={product.avatar}   alt={product.name}  />
+        <figure >
+          <img className="max-h-80 " src={product.avatar}   alt={product.name}  />
         </figure>
         <div className="card-body">
           <h2 className="card-title justify-start">
@@ -65,4 +65,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default Products;
