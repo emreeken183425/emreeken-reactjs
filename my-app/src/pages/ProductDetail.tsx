@@ -36,21 +36,22 @@ const ProductDetail = () => {
     get_product();
   }, []);
   return (
-    <div  className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 ' >
+    <div  className='grid sm:grid-cols-2 lg:grid-cols-4 gap-3 ' >
        {product.map((product: productType) => (
          
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
-          <img className=" " src={product.avatar}   alt={product.name}  />
+          <img className="w-30 h-30 " src={product.avatar}   alt={product.name}  />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
+          <h2 className="card-title justify-start">
             {product.name}
             <div className="badge badge-primary">{product.price} TL </div>
           </h2>
           
-          <div className="card-actions justify-end">
-            <div className="badge badge-primary">{product.category } </div>
+          <div className="card-actions justify-center mb-0 ">
+            <div className="badge badge-primary  ">{product.category }
+           </div>
             
           </div>
         </div>
