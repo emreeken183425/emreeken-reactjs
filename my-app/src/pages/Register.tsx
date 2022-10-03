@@ -1,18 +1,29 @@
+import { useState } from "react";
 
 
 const Register = () => {
+
+const [firstName, setFirstName] = useState<number |string|null|undefined>()  
+const [lastName, setLastName] = useState<number |string>() 
+const [email, setEmail] = useState<number |string>()
+const [password, setPassword] = useState<number |string>()  
+
+const handleSubmit=(e:any)=>{
+  e.preventDefault();
+  console.log(firstName,lastName);
   
+}
 
   
 
   return (
     <div className="d-flex justify-content-center">
       <div className="form-image d-none d-md-block ">
-        <img src={'https://picsum.photos/800/500'} alt="sample-movie" />
+        <img src={'https://picsum.photos/980/500'} alt="sample-product" />
       </div>
-      <div className="register-form">
+      <div className="register-form w-96 h-96 ">
         <h1 className="form-title display-3 ">Register</h1>
-        <form id="register" >
+        <form id="register" onSubmit={handleSubmit} >
           <div className="mb-3">
             <label htmlFor="firstName" className="form-label">
               First Name
@@ -23,7 +34,7 @@ const Register = () => {
               id="firstName"
               placeholder="Enter your first name.."
               required
-              
+              onChange={(e)=>setFirstName(e.target.value) }
             />
           </div>
           <div className="mb-3">
@@ -36,7 +47,7 @@ const Register = () => {
               id="lastName"
               placeholder="Enter your last name.."
               required
-              
+              onChange={(e)=>setLastName(e.target.value) }
             />
           </div>
           <div className="mb-3">
@@ -49,7 +60,7 @@ const Register = () => {
               id="email"
               placeholder="Enter your email adress.."
               required
-              
+              onChange={(e)=>setEmail(e.target.value) }
             />
           </div>
           <div className="mb-3">
@@ -62,7 +73,7 @@ const Register = () => {
               id="password"
               placeholder="Enter your password.."
               required
-              
+              onChange={(e)=>setPassword(e.target.value) }
             />
           </div>
           <input
