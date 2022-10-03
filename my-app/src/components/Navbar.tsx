@@ -26,8 +26,8 @@ const navigate=useNavigate()
           <div className="d-flex text-white align-items-center ">
           {currentUser ? (
             <>
-            {/* <h2 className='mb-0 text-capitalize' > {currentUser.email}  </h2> */}
-            {/* <button className='m-2 btn btn-outline-light' onClick={()=>logOut} >Logout  </button> */}
+            <h2 className='mb-0 text-capitalize' > {currentUser.email}  </h2>
+            <button className='m-2 btn btn-outline-light' onClick={()=>logOut} >Logout  </button>
             <button>Create Product</button>
             </>
           ) : (
