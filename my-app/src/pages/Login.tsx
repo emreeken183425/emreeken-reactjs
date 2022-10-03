@@ -1,10 +1,10 @@
 import {useState} from 'react'
 
 const Login = () => {
-  const [email, setEmail] = useState<number |string>()
-  const [password, setPassword] = useState<number |string>()  
+const [email, setEmail] = useState<number |string|null|undefined>()
+const [password, setPassword] = useState<number |string|null|undefined>()  
   
-  const handleSubmit=(e:any)=>{
+const handleSubmit=(e:any)=>{
     e.preventDefault();
     console.log(email,password);
     
@@ -52,6 +52,7 @@ const Login = () => {
             onChange={(e)=>setPassword(e.target.value) }
           />
         </div>
+      
         
       </form>
     </div>
