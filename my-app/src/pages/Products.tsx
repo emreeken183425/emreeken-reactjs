@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 type productType = {
   _id: string;
@@ -18,7 +19,7 @@ type productType = {
 const Products = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
-
+ const navigate=useNavigate()
   const get_product = () => {
     const api_Url =
       "https://upayments-studycase-api.herokuapp.com/api/products/";
@@ -39,9 +40,9 @@ const Products = () => {
     <div  className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3 ' >
        {product.map((product: productType) => (
          
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div onClick={()=>{navigate('detail',{state:product} )}} className="card w-96 bg-base-100 shadow-xl  ">
         <figure >
-          <img className="max-h-80 " src={product.avatar}   alt={product.name}  />
+          <img className="max-h-50 " src={product.avatar}   alt={product.name}  />
         </figure>
         <div className="card-body">
           <h2 className="card-title justify-start">

@@ -1,12 +1,16 @@
 import {useState} from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
+//import { signIn } from '../auth/firebase'
 
 const Login = () => {
 const [email, setEmail] = useState<number |string|null|undefined>()
 const [password, setPassword] = useState<number |string|null|undefined>()  
-  
-const handleSubmit=(e:any)=>{
+const navigate=useNavigate()  
+const handleLogin=(e:any)=>{
     e.preventDefault();
-    console.log(email,password);
+    navigate('/')
+    // signIn(email,password,navigate)
+    // console.log(email,password);
     
   }
 
@@ -17,7 +21,7 @@ const handleSubmit=(e:any)=>{
     </div>
     <div className="login-form w-96 h-96 ">
       <h1 className="form-title display-3 ">Login</h1>
-      <form id="register" onSubmit={handleSubmit} >
+      <form id="register" onSubmit={handleLogin} >
         
        
         <div className="mb-3">

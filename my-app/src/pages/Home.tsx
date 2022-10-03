@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import Category from '../components/Category'
+
 import Products from './Products'
 
 
@@ -8,16 +9,12 @@ import Products from './Products'
 
 const Home = () => {
  
-  
-
-
-
-
   return (
     <div className='flex flex-col ' >
-     
+      
+
          <div>
-           <Category />
+          <Category />
           </div>
           <div  >
             <Products />
