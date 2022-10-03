@@ -2,21 +2,14 @@ import { createContext,useContext } from "react"
 import {useState,useEffect} from 'react'
 import {userObserver} from '../auth/firebase'
 
-interface AppContextInterface{
-  
-  
-}
 
 
-export const AuthContext=createContext<AppContextInterface | null>(null);
+
+export const AuthContext=createContext<any>(null);
 export const useAuthContext=()=>{
   return useContext(AuthContext)
 }
-const sampleAppContext: AppContextInterface = {
-  name: "Using React Context in a Typescript App",
-  author: "thehappybug",
-  url: "http://www.example.com",
-};
+
 
 const AuthContextProvider = ({children}:any ) => {
 
@@ -29,6 +22,7 @@ useEffect(() => {
   
 }, [])
 
+console.log(currentUser);
 
 
 // Provider in your app
@@ -36,7 +30,7 @@ useEffect(() => {
   return (
     <div>
        
-        <AuthContext.Provider value={{sampleAppContext}}>
+        <AuthContext.Provider value={{currentUser}}>
             {children}
         </AuthContext.Provider>
         

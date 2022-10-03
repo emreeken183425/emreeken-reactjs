@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@material-ui/icons": "^4.11.3",
     "@mui/material": "^5.10.7",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.14.1",
@@ -21,6 +22,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1",
     "daisyui": "^2.31.0",
     "firebase": "^9.10.0",
     "react": "^18.2.0",

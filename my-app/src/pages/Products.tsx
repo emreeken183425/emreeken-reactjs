@@ -42,7 +42,7 @@ const Products = () => {
          
         <div onClick={()=>{navigate('detail',{state:product} )}} className="card w-96 bg-base-100 shadow-xl  ">
         <figure >
-          <img className="max-h-50 " src={product.avatar}   alt={product.name}  />
+          <img className="max-h-80 w-52 " src={product.avatar}   alt={product.name}  />
         </figure>
         <div className="card-body">
           <h2 className="card-title justify-start">

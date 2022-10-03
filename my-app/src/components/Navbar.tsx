@@ -3,8 +3,12 @@ import { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { logOut } from '../auth/firebase';
 import { AuthContext } from '../context/AuthContext';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { styled } from '@mui/material/styles';
 
-
+// const CustomButton = styled(AccountCircleIcon)({
+//   // your custom styles go here
+// }) as typeof AccountCircleIcon;
 
 
 const Navbar = () => {
@@ -14,8 +18,6 @@ const navigate=useNavigate()
 
 // const currentUser=  {displayName:"emre eken"}
  
-
-
   return (
     <div>
       <nav className='navbar navbar-expand-lg bg-primary ' >
@@ -25,10 +27,11 @@ const navigate=useNavigate()
           </Link>
           <div className="d-flex text-white align-items-center ">
           {currentUser ? (
-            <>
-            <h2 className='mb-0 text-capitalize' > {currentUser.email}  </h2>
-            <button className='m-2 btn btn-outline-light' onClick={()=>logOut} >Logout  </button>
-            <button>Create Product</button>
+            <>            
+            <button className='m-2 btn btn-outline-light' onClick={()=>logOut()} >Logout  </button>
+            <button className='m-2 btn btn-outline-light' onClick={()=>navigate('/create')} >Create Product</button>
+            <h6 className='mb-0 text-capitalize' > {currentUser.email}  </h6> 
+            {/* <AccountCircleIcon/> */}
             </>
           ) : (
             <>
