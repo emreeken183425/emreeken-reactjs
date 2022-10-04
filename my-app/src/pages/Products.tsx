@@ -37,7 +37,7 @@ const Products = () => {
     get_product();
   }, []);
   return (
-    <div  className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3 ' >
+    <div  className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5 ' >
        {product.map((product: productType) => (
          
         <div onClick={()=>{navigate('detail',{state:product} )}} className="card w-96 bg-base-100 shadow-xl  ">
@@ -52,8 +52,10 @@ const Products = () => {
           
           <div className="card-actions justify-center mb-0 ">
             <div className="badge badge-primary  ">{product.category }
-           </div>
-            
+           </div>           
+          </div>
+          <div className="card-actions justify-center mb-0 " >
+          <button className='mb-1 btn btn-outline-line bg-primary justify-start '> ❤ ADD FAVORİTE  </button>
           </div>
         </div>
       </div>
