@@ -40,9 +40,9 @@ const Products = () => {
     <div  className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5 ' >
        {product.map((product: productType) => (
          
-        <div onClick={()=>{navigate('detail',{state:product} )}} className="card w-96 bg-base-100 shadow-xl  ">
+        <div  className="card w-96 bg-base-100 shadow-xl  ">
         <figure >
-          <img className="max-h-80 w-52 " src={product.avatar}   alt={product.name}  />
+          <img onClick={()=>{navigate('detail',{state:product} )}} className=" imgStyle max-h-80 w-52 " src={product.avatar}   alt={product.name}  />
         </figure>
         <div className="card-body">
           <h2 className="card-title justify-start">
@@ -54,10 +54,11 @@ const Products = () => {
             <div className="badge badge-primary  ">{product.category }
            </div>           
           </div>
-          <div className="card-actions justify-center mb-0 " >
-          <button className='mb-1 btn btn-outline-line bg-primary justify-start '> ❤ ADD FAVORİTE  </button>
-          </div>
+          
         </div>
+        <div className="justify-center mb-0 " >
+          <button onClick={()=>navigate('favori') } className='mb-1 btn btn-outline-line bg-primary justify-start '> ❤ ADD FAVORİTE  </button>
+          </div>
       </div>
       ))}
 
