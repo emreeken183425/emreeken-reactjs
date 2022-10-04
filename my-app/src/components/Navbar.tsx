@@ -18,7 +18,7 @@ const navigate=useNavigate()
  
   return (
     <div>
-      <nav className='navbar navbar-expand-lg bg-primary ' >
+      <nav className='navbar navbar-expand-lg bg-secondary  ' >
         <div className="container-fluid">
           <Link to={'/'} className='navbar-brand text-white' >
           <h1 style={{fontSize:'20px'}} >UPayments React JS Case Study</h1>

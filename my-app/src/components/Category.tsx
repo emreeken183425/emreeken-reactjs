@@ -38,7 +38,7 @@ const Category = () => {
       <div className='flex m-2 text-center  justify-evenly border-2 border-blue-600 p-2 '>
         {
           category.map((category:categoryType)=>(
-            <div className='btn btn-outline-line bg-warning ' >{category.name} </div>
+            <div  className='btn btn-outline-line bg-warning ' >{category.name} </div>
           ) )
         }
         

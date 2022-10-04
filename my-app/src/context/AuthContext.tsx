@@ -14,7 +14,7 @@ export const useAuthContext=()=>{
 const AuthContextProvider = ({children}:any ) => {
 
 const [currentUser, setCurrentUser] = useState()
-
+// const [favorites, setFavorites] = useState([])
 useEffect(() => {
   
 
@@ -30,7 +30,7 @@ console.log(currentUser);
   return (
     <div>
        
-        <AuthContext.Provider value={{currentUser}}>
+        <AuthContext.Provider value={{currentUser} }>
             {children}
         </AuthContext.Provider>
         
