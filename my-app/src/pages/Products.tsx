@@ -22,6 +22,7 @@ const Products = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
  const navigate=useNavigate()
+ 
   const get_product = () => {
     const api_Url =
       "https://upayments-studycase-api.herokuapp.com/api/products/";
