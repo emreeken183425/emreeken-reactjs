@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 type productType = {
   _id: string;
@@ -18,6 +19,7 @@ type productType = {
 const Products = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { favorites,setFavorites } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const get_product = () => {
@@ -44,6 +46,12 @@ const Products = () => {
 
     setProduct(result);
   };
+
+const handleFavorite=(basket:any)=>{
+
+setFavorites([...favorites,basket])
+}
+console.log(favorites);
 
   return (
     <>
@@ -132,8 +140,8 @@ const Products = () => {
               </div>
             </div>
             <div className="justify-center mb-0 ">
-              <button
-                onClick={() => navigate("favori")}
+              <button 
+                onClick={() => handleFavorite(product)}
                 className="mb-1 btn btn-outline-line bg-primary justify-start "
               >
                 {" "}
