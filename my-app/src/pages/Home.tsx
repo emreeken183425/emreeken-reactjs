@@ -1,6 +1,6 @@
 
 import { useState,useEffect } from 'react'
-import Category from '../components/Category'
+//import Category from '../components/Category'
 import axios from 'axios'
 import Products from './Products'
 
