@@ -44,6 +44,7 @@ const CreateProduct = () => {
        <div className=" text-white gap-5 m-5 ">
        <label htmlFor="name">Name:</label>
         <input
+        className=" text-dark "
           type="text"
           id="name"
           onChange={(e) => {
@@ -56,6 +57,7 @@ const CreateProduct = () => {
        <div className=" text-white gap-5 m-5 ">
        <label htmlFor="price">Price:</label>
         <input
+         className=" text-dark "
           type="number"
           id="price"
           onChange={(e) => {
@@ -68,7 +70,7 @@ const CreateProduct = () => {
         <div className=" text-white gap-5 m-5 " >
         <label htmlFor="category">category:</label><br />
        
-        <select  name="category"  placeholder=' choose category' id="category" onChange={(e)=>setCategory(e.target.value)} >
+        <select  className=" text-dark " name="category"  placeholder=' choose category' id="category" onChange={(e)=>setCategory(e.target.value)} >
           <option value="Clothing">Clothing</option>
           <option value="Electronics">Electronics</option>
           <option value="Accessories">Accessories</option>
@@ -79,6 +81,7 @@ const CreateProduct = () => {
         <div className=" text-white gap-5 m-5 ">
         <label htmlFor="avatar">avatar:</label>
         <input
+         className=" text-dark "
           type="text"
           id="avatar"
           onChange={(e) => {
@@ -91,6 +94,7 @@ const CreateProduct = () => {
        <div className=" text-white gap-5 m-5 ">
        <label htmlFor="description" >description:</label>
         <input
+         className=" text-dark "
           type="text"
           id="description"
           onChange={(e) => {
@@ -102,13 +106,13 @@ const CreateProduct = () => {
        </div>
         <div className=" text-white gap-5 m-5 ">
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" placeholder=' Enter your email' required />
+        <input  className=" text-dark " type="email" id="email" placeholder=' Enter your email' required />
         </div>
-       
+        <div className='badge badge-primary bg-primary  ml-96 p-3 d-flex align-items-center '>
+        <button   type="submit">SUBMİT</button>
+        </div>
       </form>
-      <div className=" butonsubmit ">
-        <button  className='badge badge-primary bg-primary mt-3 p-3 d-flex align-items-center ' type="submit">SUBMİT</button>
-        </div>
+     
     </div>
   );
 };
